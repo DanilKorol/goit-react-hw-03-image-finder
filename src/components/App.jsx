@@ -39,8 +39,8 @@ export class App extends Component {
       }
       this.setState(prevState => ({
         images: [...prevState.images, ...response.hits],
+        totalHits: response.totalHits,
       }));
-      this.setState({ totalHits: response.totalHits });
     } catch (error) {
       toast.error('oops, something went wrong, please, try again');
     } finally {
